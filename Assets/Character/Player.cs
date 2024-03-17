@@ -11,11 +11,18 @@ public class Player : MonoBehaviour {
     private static readonly int Walking = Animator.StringToHash("Walking");
     private static readonly int Running = Animator.StringToHash("Running");
     private static readonly int Attack = Animator.StringToHash("Attack");
+    private static readonly int Blink = Animator.StringToHash("Blink");
     private const float Speed = 150.0f;
+    private float _nextBlinkTime;
 
     public void Awake() {
         _anim = GetComponent<Animator>();
         _rigidbody = GetComponent<Rigidbody2D>();
+        _nextBlinkTime = GetNextBlinkTime();
+    }
+
+    private float GetNextBlinkTime() {
+        return Time.time + Random.Range(3f, 7f);
     }
 
     public void Update() {
@@ -45,6 +52,11 @@ public class Player : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(1)) {
             _anim.SetTrigger(Attack);
+        }
+
+        if (Time.time >= _nextBlinkTime) {
+            _anim.SetTrigger(Blink);
+            _nextBlinkTime = GetNextBlinkTime();
         }
     }
 }
