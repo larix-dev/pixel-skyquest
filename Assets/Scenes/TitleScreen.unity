@@ -312,7 +312,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -491,9 +491,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 343056909}
-        m_TargetAssemblyTypeName: TitleScreen.ButtonHandler, Assembly-CSharp
-        m_MethodName: Exit
+      - m_Target: {fileID: 1518637594}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -992,7 +992,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1175835100}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1518637594}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 343056909}
+        m_TargetAssemblyTypeName: TitleScreen.ButtonHandler, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SampleScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1175835100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1112,7 +1136,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1277062810}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1518637594}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1277062810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1226,6 +1262,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1296716433}
   m_CullTransparentMesh: 1
+--- !u!82 &1518637594 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5853689623565105702, guid: 4e3e57a266028c04f9bae79c2e7399f4, type: 3}
+  m_PrefabInstance: {fileID: 7125551755529555849}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1522554546
 GameObject:
   m_ObjectHideFlags: 0
@@ -1375,7 +1416,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1658237681}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1518637594}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1658237681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1758,6 +1811,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b4b23d7dd8810b4e8041b6f0885361b, type: 3}
+--- !u!1001 &7125551755529555849
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6212938767184763327, guid: 4e3e57a266028c04f9bae79c2e7399f4, type: 3}
+      propertyPath: m_Name
+      value: SFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883788335766376763, guid: 4e3e57a266028c04f9bae79c2e7399f4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 572
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883788335766376763, guid: 4e3e57a266028c04f9bae79c2e7399f4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 323.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883788335766376763, guid: 4e3e57a266028c04f9bae79c2e7399f4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883788335766376763, guid: 4e3e57a266028c04f9bae79c2e7399f4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883788335766376763, guid: 4e3e57a266028c04f9bae79c2e7399f4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883788335766376763, guid: 4e3e57a266028c04f9bae79c2e7399f4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883788335766376763, guid: 4e3e57a266028c04f9bae79c2e7399f4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883788335766376763, guid: 4e3e57a266028c04f9bae79c2e7399f4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883788335766376763, guid: 4e3e57a266028c04f9bae79c2e7399f4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883788335766376763, guid: 4e3e57a266028c04f9bae79c2e7399f4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4e3e57a266028c04f9bae79c2e7399f4, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1767,4 +1877,5 @@ SceneRoots:
   - {fileID: 1522554549}
   - {fileID: 343056908}
   - {fileID: 554754362}
+  - {fileID: 7125551755529555849}
   - {fileID: 3887970433037634624}
