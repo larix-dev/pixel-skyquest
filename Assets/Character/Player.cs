@@ -1,4 +1,7 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Character {
 public class Player : MonoBehaviour {
@@ -12,13 +15,19 @@ public class Player : MonoBehaviour {
     private static readonly int Running = Animator.StringToHash("Running");
     private static readonly int Attack = Animator.StringToHash("Attack");
     private static readonly int Blink = Animator.StringToHash("Blink");
+
     private const float Speed = 150.0f;
+    private const float AttackDuration = 0.35f;
+
     private float _nextBlinkTime;
+    private BoxCollider2D _attackTrigger;
 
     public void Awake() {
         _anim = GetComponent<Animator>();
         _rigidbody = GetComponent<Rigidbody2D>();
         _nextBlinkTime = GetNextBlinkTime();
+        _attackTrigger = GetComponents<BoxCollider2D>()[1];
+        _attackTrigger.enabled = false;
     }
 
     private float GetNextBlinkTime() {
@@ -52,11 +61,26 @@ public class Player : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(1)) {
             _anim.SetTrigger(Attack);
+            _attackTrigger.enabled = true;
+            StartCoroutine(AttackTimer());
         }
 
         if (Time.time >= _nextBlinkTime) {
             _anim.SetTrigger(Blink);
             _nextBlinkTime = GetNextBlinkTime();
+        }
+    }
+
+    private IEnumerator<WaitForSeconds> AttackTimer() {
+        yield return new WaitForSeconds(AttackDuration);
+        _attackTrigger.enabled = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        _attackTrigger.enabled = false;
+        var hitHandler = other.GetComponent<HitHandler>();
+        if (hitHandler != null) {
+            hitHandler.HandleHit();
         }
     }
 }
