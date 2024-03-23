@@ -2,17 +2,15 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour {
     public Transform target;
-    private const float LerpSpeed = 3.0f;
 
-    private Vector3 _offset;
-    private Vector3 _targetPos;
+    private float _z;
 
     private void Start() {
-        _offset = transform.position - target.position;
+        _z = transform.position.z;
     }
 
     private void LateUpdate() {
-        _targetPos = target.position + _offset;
-        transform.position = Vector3.Lerp(transform.position, _targetPos, LerpSpeed * Time.deltaTime);
+        var pos = target.position;
+        transform.position = new Vector3(pos.x, pos.y, _z);
     }
 }
