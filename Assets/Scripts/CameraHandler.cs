@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
 
@@ -15,7 +14,9 @@ public class CameraHandler : MonoBehaviour {
 
     private void Start() {
         _camera = GetComponent<PixelPerfectCamera>();
+        _zoomLevel = (float) Screen.width / _camera.refResolutionX;
         _z = transform.position.z;
+        ResizeCamera();
     }
 
     private void Update() {
