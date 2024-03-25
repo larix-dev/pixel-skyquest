@@ -1,8 +1,7 @@
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-namespace UI {
+namespace UI.Scripts {
 public class ButtonHandler : MonoBehaviour {
     public void Exit() {
         if (Application.isEditor) {
@@ -10,10 +9,6 @@ public class ButtonHandler : MonoBehaviour {
         } else {
             Application.Quit();
         }
-    }
-
-    public void LoadScene(string scene) {
-        SceneManager.LoadSceneAsync(scene);
     }
 }
 }
