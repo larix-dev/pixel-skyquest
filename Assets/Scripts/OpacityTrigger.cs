@@ -6,7 +6,7 @@ public class OpacityTrigger : MonoBehaviour {
     private GameObject _player;
     private float _targetOpacity;
 
-    private const float LerpSpeed = 0.05f;
+    private const float LerpSpeed = 0.025f;
     private const float ContractAmount = 2f;
 
     private void Start() {
