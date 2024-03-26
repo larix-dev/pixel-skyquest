@@ -1,8 +1,14 @@
 {
   "Messages": [
     "Welcome to the tutorial!",
-    "Move around using WASD, and use the spacebar to jump.",
-    "Hold shift to walk, right-click to attack!",
-    "First, let's visit the graveyard to the west."
+    "Let's go over the controls: hold shift to sneak, use the spacebar to jump, left-click to pick up, right-click to attack.",
+    "Pixel Aetherium is a game about solving puzzles. In this level, we will walk you through all of the objectives.",
+    "First, visit the graveyard to the west. Examine the graves, and try jumping on the platform.",
+    "If you were successful in the graveyard, some cubes will appear!",
+    "Try pushing the cubes around. If you push them to their correct places, you will find a key!",
+    "What could this key possibly open? Perhaps the locked door...",
+    "Finally, examine the runic pillars around the altar. Try attacking them!",
+    "If you are successful, a portal should open above the altar, leading to the next floor.",
+    "Good luck, and happy puzzle-solving!"
   ]
 }

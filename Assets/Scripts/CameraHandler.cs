@@ -4,8 +4,8 @@ using UnityEngine.Experimental.Rendering.Universal;
 public class CameraHandler : MonoBehaviour {
     public Transform target;
 
-    private const float MinZoom = 1f;
-    private const float MaxZoom = 5f;
+    private const float MinZoom = 2f;
+    private const float MaxZoom = 6f;
     private const float ZoomSpeed = 10f;
 
     private PixelPerfectCamera _camera;

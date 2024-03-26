@@ -1,13 +1,14 @@
 using TMPro;
 using UnityEngine;
 
-namespace UI {
+namespace UI.Scripts {
 public class Hud : MonoBehaviour {
-    public string levelName;
+    public int floorNumber;
+    public string floorName;
     public TextMeshProUGUI levelDisplay;
 
     public void Start() {
-        levelDisplay.SetText(levelName);
+        levelDisplay.SetText($"Floor {floorNumber}: {floorName}");
     }
 }
 }
