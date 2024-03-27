@@ -65,7 +65,7 @@ public class Player : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Space)) {
             _anim.SetTrigger(Jump);
-            OnJump!();
+            OnJump?.Invoke();
         }
 
         if (Input.GetMouseButtonDown(1) && _canAttack) {

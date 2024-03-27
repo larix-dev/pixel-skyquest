@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: -6933021160189781718}
   m_Layer: 20
   m_Name: PF Props Stone Cube
-  m_TagString: Untagged
+  m_TagString: Cube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

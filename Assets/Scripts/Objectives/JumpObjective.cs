@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace Objectives {
@@ -7,7 +6,8 @@ public class JumpObjective : Objective {
 
     private int _jumpsCompleted;
     private Player _player;
-    
+
+
     private void Start() {
         _player = GameObject.Find("Player").GetComponent<Player>();
     }
@@ -17,7 +17,7 @@ public class JumpObjective : Objective {
             _player.OnJump += HandleJump;
         }
     }
-    
+
     private void OnTriggerExit2D(Collider2D other) {
         if (other.CompareTag("Player")) {
             _player.OnJump -= HandleJump;
@@ -27,10 +27,10 @@ public class JumpObjective : Objective {
 
     private void HandleJump() {
         _jumpsCompleted++;
-    }
-
-    public override bool Complete() {
-        return _jumpsCompleted >= jumps;
+        if (_jumpsCompleted >= jumps) {
+            SetComplete();
+            Destroy(gameObject);
+        }
     }
 }
 }
