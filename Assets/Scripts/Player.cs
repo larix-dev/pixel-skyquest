@@ -25,6 +25,10 @@ public class Player : MonoBehaviour {
     private AudioSource _audioSource;
     public AudioClip[] attackSounds;
 
+    public delegate void JumpAction();
+
+    public event JumpAction OnJump;
+
     public void Awake() {
         _anim = GetComponent<Animator>();
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -61,6 +65,7 @@ public class Player : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Space)) {
             _anim.SetTrigger(Jump);
+            OnJump!();
         }
 
         if (Input.GetMouseButtonDown(1) && _canAttack) {
