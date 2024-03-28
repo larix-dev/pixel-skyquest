@@ -480,7 +480,7 @@ TextureImporter:
       name: TX Props Rune Pillar X2
       rect:
         serializedVersion: 2
-        x: 227
+        x: 214
         y: 451
         width: 26
         height: 52
@@ -498,31 +498,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Props Rune Pillar X2 Glow
-      rect:
-        serializedVersion: 2
-        x: 270
-        y: 457
-        width: 5
-        height: 26
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 04e899bac27970c41b06e0bc124590eb
-      internalID: 21300044
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: TX Props Rune Pillar X3
       rect:
         serializedVersion: 2
-        x: 227
+        x: 214
         y: 355
         width: 26
         height: 66
@@ -543,7 +522,7 @@ TextureImporter:
       name: TX Props Rune Pillar Broken
       rect:
         serializedVersion: 2
-        x: 227
+        x: 214
         y: 291
         width: 26
         height: 38
@@ -556,48 +535,6 @@ TextureImporter:
       bones: []
       spriteID: 9242e74a03e5ca44c988038d7bd535ef
       internalID: 21300060
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Props Rune Pillar X3 Glow
-      rect:
-        serializedVersion: 2
-        x: 270
-        y: 361
-        width: 5
-        height: 40
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2664a20451e28f14c80cbf6af8161452
-      internalID: 21300062
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Props Rune Pillar Broken Glow
-      rect:
-        serializedVersion: 2
-        x: 270
-        y: 297
-        width: 5
-        height: 12
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 242eff54a423efa47a89bf90227333ba
-      internalID: 21300064
       vertices: []
       indices: 
       edges: []
@@ -1135,8 +1072,8 @@ TextureImporter:
         y: 171
         width: 94
         height: 72
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1144,90 +1081,6 @@ TextureImporter:
       bones: []
       spriteID: 56fdc1b340834d34f851b10cadc9b613
       internalID: 21300142
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Props Altar Rune 1
-      rect:
-        serializedVersion: 2
-        x: 330
-        y: 241
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 95c63f14737f51a49be7c0de7137a155
-      internalID: 21300144
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Props Altar Rune 2
-      rect:
-        serializedVersion: 2
-        x: 337
-        y: 241
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3bced06fb909dff4ab19bd0e6ce3b5ef
-      internalID: 21300146
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Props Altar Rune 3
-      rect:
-        serializedVersion: 2
-        x: 330
-        y: 234
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6dfa6583e87040f4b8dad4facf0dc338
-      internalID: 21300148
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: TX Props Altar Rune 4
-      rect:
-        serializedVersion: 2
-        x: 337
-        y: 234
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a587aa5413e7b9b40b6ef7914c56a32b
-      internalID: 21300150
       vertices: []
       indices: 
       edges: []
@@ -1362,8 +1215,8 @@ TextureImporter:
       name: TX Props Well
       rect:
         serializedVersion: 2
-        x: 420
-        y: 104
+        x: 224
+        y: 80
         width: 58
         height: 49
       alignment: 7
@@ -1375,6 +1228,90 @@ TextureImporter:
       bones: []
       spriteID: f9f70ad008ebefc4bb5915052e8339ff
       internalID: 21300164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props Altar Active
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 90
+        width: 94
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 176e1c1b961913049b71ea5643b53418
+      internalID: 845244013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props Rune Pillar Broken Active
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 291
+        width: 26
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cab5c6720828b442b588a1d6f71face
+      internalID: -772455258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props Rune Pillar X3 Active
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 355
+        width: 26
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 775f97cdb8063e942bbcc871659c9a2b
+      internalID: 1268036444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props Rune Pillar X2 Active
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 451
+        width: 26
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f9a38e9f6ff8524bb878cc057a7a994
+      internalID: -1680226627
       vertices: []
       indices: 
       edges: []
@@ -1391,6 +1328,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       TX Props Altar: 21300142
+      TX Props Altar Active: 845244013
       TX Props Altar Rune 1: 21300144
       TX Props Altar Rune 2: 21300146
       TX Props Altar Rune 3: 21300148
@@ -1415,10 +1353,13 @@ TextureImporter:
       TX Props Road Sign E: 21300086
       TX Props Road Sign W: 21300088
       TX Props Rune Pillar Broken: 21300060
+      TX Props Rune Pillar Broken Active: 820319118
       TX Props Rune Pillar Broken Glow: 21300064
       TX Props Rune Pillar X2: 21300042
+      TX Props Rune Pillar X2 Active: -1680226627
       TX Props Rune Pillar X2 Glow: 21300044
       TX Props Rune Pillar X3: 21300058
+      TX Props Rune Pillar X3 Active: 1268036444
       TX Props Rune Pillar X3 Glow: 21300062
       TX Props Statue: 21300114
       TX Props Stone Bench E: 21300100
@@ -1438,6 +1379,7 @@ TextureImporter:
       TX Props Well: 21300164
       TX Props Wooden Gate: 21300158
       TX Props Wooden Gate Opened: 21300160
+      TX Props_0: 756800325
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

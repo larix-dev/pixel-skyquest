@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace Objectives {
 public class ObjectiveHandler : MonoBehaviour {
-    public GameObject altar;
+    public AltarTrigger altar;
     public List<Objective> objectives;
-    
+
     private void Start() {
         foreach (var objective in objectives) {
             objective.OnComplete += HandleCompletion;
@@ -15,7 +15,7 @@ public class ObjectiveHandler : MonoBehaviour {
 
     private void HandleCompletion() {
         if (objectives.All(o => o.Complete)) {
-            // handle completion
+            altar.TriggerAltar();
         }
     }
 }

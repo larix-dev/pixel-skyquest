@@ -14,7 +14,7 @@ public class PixelSnap {
     private static void SnapToPixelGrid() {
         foreach (var t in Selection.transforms) {
             var pos = t.position;
-            t.position = new Vector2(Snap(pos.x), Snap(pos.y));
+            t.position = new Vector3(Snap(pos.x), Snap(pos.y), pos.z);
         }
     }
 

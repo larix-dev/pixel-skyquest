@@ -29,6 +29,12 @@ public class Player : MonoBehaviour {
 
     public event JumpAction OnJump;
 
+    public delegate void KeyAction(bool hasKey);
+
+    public event KeyAction KeyEvent;
+    
+    public bool HasKey { get; private set; }
+
     public void Awake() {
         _anim = GetComponent<Animator>();
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -99,5 +105,10 @@ public class Player : MonoBehaviour {
         if (hitHandler != null) {
             hitHandler.HandleHit();
         }
+    }
+
+    public void SetHasKey(bool hasKey) {
+        HasKey = hasKey;
+        KeyEvent?.Invoke(hasKey);
     }
 }
