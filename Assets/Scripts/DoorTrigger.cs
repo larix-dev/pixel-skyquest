@@ -5,9 +5,11 @@ public class DoorTrigger : MonoBehaviour {
     public GameObject openDoor;
 
     private Player _player;
+    private AudioSource _sfx;
 
     private void Start() {
         _player = GameObject.FindWithTag("Player").GetComponent<Player>();
+        _sfx = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -15,6 +17,7 @@ public class DoorTrigger : MonoBehaviour {
             lockedDoor.SetActive(false);
             openDoor.SetActive(true);
             _player.SetHasKey(false);
+            _sfx.Play();
         }
     }
 }

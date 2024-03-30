@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -14,6 +15,11 @@ public abstract class Objective : MonoBehaviour {
     protected void SetComplete() {
         Complete = true;
         OnComplete?.Invoke();
+        StartCoroutine(CompleteRoutine());
+    }
+
+    private IEnumerator CompleteRoutine() {
+        yield return new WaitForSeconds(2f);
         result.Invoke();
     }
 

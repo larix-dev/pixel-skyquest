@@ -27,9 +27,8 @@ public class JumpObjective : Objective {
 
     private void HandleJump() {
         _jumpsCompleted++;
-        if (_jumpsCompleted >= jumps) {
+        if (_jumpsCompleted == jumps) {
             SetComplete();
-            Destroy(gameObject);
         }
     }
 }

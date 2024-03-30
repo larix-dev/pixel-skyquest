@@ -16,14 +16,18 @@ public class Player : MonoBehaviour {
 
     private const float Speed = 150.0f;
     private const float AttackDuration = 0.35f;
-
+    private const float JumpDuration = 0.5f;
+    
     private float _nextBlinkTime;
 
     private BoxCollider2D _attackTrigger;
     private bool _canAttack = true;
-
+    private bool _canJump = true;
+    
     private AudioSource _audioSource;
+
     public AudioClip[] attackSounds;
+    public AudioSource walkSound;
 
     public delegate void JumpAction();
 
@@ -32,7 +36,7 @@ public class Player : MonoBehaviour {
     public delegate void KeyAction(bool hasKey);
 
     public event KeyAction KeyEvent;
-    
+
     public bool HasKey { get; private set; }
 
     public void Awake() {
@@ -64,14 +68,17 @@ public class Player : MonoBehaviour {
         if (movement.magnitude > 0) {
             _anim.SetFloat(Horizontal, movement.x);
             _anim.SetFloat(Vertical, movement.y);
+            PlayWalkSound();
         }
 
         _anim.SetBool(Walking, movement.magnitude > 0 && Input.GetKey(KeyCode.LeftShift));
         _anim.SetBool(Running, movement.magnitude > 0 && !Input.GetKey(KeyCode.LeftShift));
 
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        if (Input.GetKeyDown(KeyCode.Space) && _canJump) {
             _anim.SetTrigger(Jump);
             OnJump?.Invoke();
+            _canJump = false;
+            StartCoroutine(JumpTimer());
         }
 
         if (Input.GetMouseButtonDown(1) && _canAttack) {
@@ -88,6 +95,12 @@ public class Player : MonoBehaviour {
         }
     }
 
+    private void PlayWalkSound() {
+        if (!walkSound.isPlaying) {
+            Helpers.PlayVar(walkSound, this);
+        }
+    }
+
     private void PlayAttackSound() {
         _audioSource.clip = attackSounds[Random.Range(0, attackSounds.Length)];
         Helpers.PlayVar(_audioSource, this);
@@ -97,6 +110,12 @@ public class Player : MonoBehaviour {
         yield return new WaitForSeconds(AttackDuration);
         _attackTrigger.enabled = false;
         _canAttack = true;
+    }
+
+    private IEnumerator<WaitForSeconds> JumpTimer() {
+        yield return new WaitForSeconds(JumpDuration);
+        PlayWalkSound();
+        _canJump = true;
     }
 
     private void OnTriggerEnter2D(Collider2D other) {

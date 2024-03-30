@@ -9,7 +9,7 @@ public static class Helpers {
     private const float PitchVar = 0.1f;
 
     public static GameObject FindChild(GameObject g, string name) {
-        var children = g.GetComponentsInChildren<Transform>();
+        var children = g.GetComponentsInChildren<Transform>(true);
         return children.FirstOrDefault(k => k.gameObject.name == name)?.gameObject;
     }
 

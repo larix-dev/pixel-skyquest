@@ -1,11 +1,13 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Handlers;
+using UnityEngine;
 
 namespace Objectives {
 public class MultiPillarObjective : Objective {
     private List<RunePillar> _pillars;
-
+    private AudioSource _failSfx;
     private readonly List<RunePillar> _activated = new();
 
     private void Start() {
@@ -13,6 +15,8 @@ public class MultiPillarObjective : Objective {
         foreach (var pillar in _pillars) {
             pillar.OnPillarActivate += HandlePillarActivate;
         }
+
+        _failSfx = GetComponent<AudioSource>();
     }
 
     private void HandlePillarActivate(RunePillar sender) {
@@ -22,10 +26,17 @@ public class MultiPillarObjective : Objective {
             SetComplete();
         } else {
             _activated.Clear();
-            foreach (var pillar in _pillars) {
-                pillar.SetActive(false);
-            }
+            StartCoroutine(DeactivatePillars());
         }
+    }
+
+    private IEnumerator DeactivatePillars() {
+        yield return new WaitForSeconds(2);
+        foreach (var pillar in _pillars) {
+            pillar.SetActive(false);
+        }
+
+        _failSfx.Play();
     }
 }
 }
