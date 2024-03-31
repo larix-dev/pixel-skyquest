@@ -4,7 +4,6 @@ orbs:
 workflows:
   build:
     jobs:
-      - checkout
       - unity/build:
           build-target: StandaloneWindows64
           compress: true
