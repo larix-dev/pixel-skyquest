@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7761901644074259396}
   - component: {fileID: 181572250614926663}
-  - component: {fileID: 2174276703758440945}
   - component: {fileID: 287588893968569344}
   m_Layer: 21
   m_Name: UnlockableDoor
@@ -132,20 +131,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2174276703758440945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4045050920056648815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb772a9253424249b9e285cd838228a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lockedDoor: {fileID: 2511511386202078298}
-  openDoor: {fileID: 8608917375732743474}
 --- !u!61 &287588893968569344
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -268,11 +253,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a057178eb028e94fb93bf39262ea3e8, type: 3}
---- !u!1 &2511511386202078298 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2055102311959635369, guid: 6a057178eb028e94fb93bf39262ea3e8, type: 3}
-  m_PrefabInstance: {fileID: 4494485666077104627}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2511511386202078300 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2055102311959635375, guid: 6a057178eb028e94fb93bf39262ea3e8, type: 3}
@@ -375,11 +355,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e9c401d7a70ec94d956296ea011f594, type: 3}
---- !u!1 &8608917375732743474 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2055102311959635369, guid: 8e9c401d7a70ec94d956296ea011f594, type: 3}
-  m_PrefabInstance: {fileID: 7781151533072963739}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8608917375732743476 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2055102311959635375, guid: 8e9c401d7a70ec94d956296ea011f594, type: 3}

@@ -1,7 +1,7 @@
 using UnityEngine;
 
 namespace Handlers {
-public class CrateHitHandler : HitHandler {
+public class ObjectBreakHandler : HitHandler {
     public GameObject drop;
     public Vector2 dropOffset;
 
