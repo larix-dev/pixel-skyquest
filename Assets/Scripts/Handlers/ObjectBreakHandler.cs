@@ -3,19 +3,29 @@ using UnityEngine;
 namespace Handlers {
 public class ObjectBreakHandler : HitHandler {
     public GameObject drop;
-    public Vector2 dropOffset;
+    public AudioClip breakSound;
 
     public delegate void BreakAction();
+
     public event BreakAction OnBreak;
 
     public override void HandleHit() {
-        var go = gameObject;
-        var pos = go.transform.position;
+        AudioSource.PlayClipAtPoint(breakSound, gameObject.transform.position, 0.25f);
         OnBreak?.Invoke();
-        Destroy(go);
-        var result = Instantiate(drop);
-        result.transform.position = pos + (Vector3)dropOffset;
+        DropItem();
+        Destroy(gameObject);
     }
-    
+
+    private void DropItem() {
+        if (!drop) return;
+        var o = gameObject;
+        drop.transform.position = o.transform.position;
+        drop.layer = o.layer;
+        foreach (var sr in drop.GetComponentsInChildren<SpriteRenderer>()) {
+            sr.sortingLayerName = GetComponent<SpriteRenderer>().sortingLayerName;
+        }
+
+        Instantiate(drop);
+    }
 }
 }

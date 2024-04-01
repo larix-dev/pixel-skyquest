@@ -14,7 +14,7 @@ public class Player : MonoBehaviour {
     private static readonly int Attack = Animator.StringToHash("Attack");
     private static readonly int Blink = Animator.StringToHash("Blink");
 
-    private const float Speed = 150.0f;
+    private const float Speed = 155.0f;
     private const float AttackDuration = 0.35f;
     private const float JumpDuration = 0.5f;
     

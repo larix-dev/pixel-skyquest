@@ -1,6 +1,8 @@
 using UnityEngine;
 
-public class CubeHandler : MonoBehaviour {
+public class MotionSound : MonoBehaviour {
+    public AudioClip sound;
+    
     private AudioSource _audioSource;
     private Rigidbody2D _rigidbody;
 
@@ -11,6 +13,7 @@ public class CubeHandler : MonoBehaviour {
 
     private void Update() {
         if (_rigidbody.velocity.magnitude > 0.1f && !_audioSource.isPlaying) {
+            _audioSource.clip = sound;
             Helpers.PlayVar(_audioSource, this);
         }
     }
