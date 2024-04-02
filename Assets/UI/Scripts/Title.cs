@@ -4,11 +4,11 @@ using UnityEngine;
 namespace UI.Scripts {
 public class Title : MonoBehaviour {
     public void Exit() {
-        if (Application.isEditor) {
+        #if UNITY_EDITOR
             EditorApplication.isPlaying = false;
-        } else {
+        #else
             Application.Quit();
-        }
+        #endif
     }
 }
 }
