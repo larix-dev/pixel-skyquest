@@ -4,6 +4,7 @@ using System.Linq;
 namespace Objectives {
 public class CompositeObjective : Objective {
     private List<Objective> _objectives;
+    private bool _complete;
 
     private void Start() {
         _objectives = GetComponentsInChildren<Objective>().ToList();
@@ -14,7 +15,8 @@ public class CompositeObjective : Objective {
     }
 
     private void HandleCompletion() {
-        if (_objectives.All(o => o.Complete)) {
+        if (!_complete && _objectives.All(o => o.Complete)) {
+            _complete = true;
             SetComplete();
         }
     }
