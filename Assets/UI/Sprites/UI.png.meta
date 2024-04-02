@@ -521,6 +521,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: UI Return
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 16
+        width: 96
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0db377f44b2a944084ff957b71dcbdb
+      internalID: 1265194852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI Return Pressed
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 96
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f15793a301d72c47983e07cf9b902ea
+      internalID: -1898010971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -549,6 +591,8 @@ TextureImporter:
       UI Options Pressed: 2079449644
       UI Previous: 345172004
       UI Previous Pressed: 1017717398
+      UI Return: 1265194852
+      UI Return Pressed: -1898010971
       UI Save Quit: -1903508952
       UI Save Quit Pressed: 1158843677
       UI_19: 356054828
