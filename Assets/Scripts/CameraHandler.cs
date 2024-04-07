@@ -4,31 +4,32 @@ using UnityEngine.Experimental.Rendering.Universal;
 public class CameraHandler : MonoBehaviour {
     public Transform target;
 
-    private const float MinZoom = 2f;
-    private const float MaxZoom = 6f;
-    private const float ZoomSpeed = 10f;
+    private const float MinZoom = 0.5f;
+    private const float MaxZoom = 1.5f;
+    private const float ZoomSpeed = 5f;
 
     private PixelPerfectCamera _camera;
     private float _zoomLevel = 1f;
     private float _z;
+    private Vector2 _res;
 
     private void Start() {
         _camera = GetComponent<PixelPerfectCamera>();
-        _zoomLevel = (float) Screen.width / _camera.refResolutionX;
+        _res = new Vector2(_camera.refResolutionX, _camera.refResolutionY);
         _z = transform.position.z;
-        ResizeCamera();
     }
 
     private void Update() {
-        var delta = Input.GetAxis("Mouse ScrollWheel") * ZoomSpeed;
+        var delta = -Input.GetAxis("Mouse ScrollWheel") * ZoomSpeed;
         if (delta == 0) return;
         _zoomLevel = Mathf.Clamp(_zoomLevel + delta, MinZoom, MaxZoom);
         ResizeCamera();
     }
 
     private void ResizeCamera() {
-        _camera.refResolutionX = Mathf.FloorToInt(Screen.width / _zoomLevel);
-        _camera.refResolutionY = Mathf.FloorToInt(Screen.height / _zoomLevel);
+        var res = _res * _zoomLevel;
+        _camera.refResolutionX = Mathf.RoundToInt(res.x);
+        _camera.refResolutionY = Mathf.RoundToInt(res.y);
     }
 
     private void OnRectTransformDimensionsChange() {
