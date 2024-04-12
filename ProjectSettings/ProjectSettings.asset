@@ -605,14 +605,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: pixel-aetherium
+  metroPackageName: pixel-skyquest
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: pixel-aetherium
+  metroApplicationDescription: pixel-skyquest
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -683,7 +683,7 @@ PlayerSettings:
   cloudProjectId: 516e8c86-f6fa-4640-ac1d-9c7dfd461a01
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: pixel-aetherium
+  projectName: pixel-skyquest
   organizationId: tadashi_3
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
