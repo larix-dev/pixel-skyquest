@@ -1,2 +1,2 @@
-# Pixel Aetherium
-Pixel Aetherium: the top-down pixel-art dungeon-crawler RPG!
+# Pixel SkyQuest
+Pixel SkyQuest: the top-down pixel-art puzzle-solving dungeon-crawler RPG!
